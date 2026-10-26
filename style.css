@@ -74,7 +74,18 @@ a { color: var(--vert); }
   margin: 20px 0;
 }
 .accueil { text-align: center; padding-top: 24px; }
-.accueil img { height: 220px; width: auto; }
+.accueil .hero { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto; }
+.lieux { margin: 40px 0 8px; }
+.lieux h2 { text-align: center; font-size: 26px; margin-bottom: 24px; }
+.lieu { display: flex; align-items: center; gap: 28px; margin: 0 0 32px; }
+.lieu:nth-of-type(even) { flex-direction: row-reverse; }
+.lieu img { flex: 0 0 48%; width: 48%; height: auto; border-radius: 20px; }
+.lieu h3 { font-size: 20px; margin: 0 0 4px; color: var(--vert); }
+.lieu p { margin: 0; }
+@media (max-width: 600px) {
+  .lieu, .lieu:nth-of-type(even) { flex-direction: column; gap: 12px; align-items: stretch; }
+  .lieu img { width: 100%; flex-basis: auto; }
+}
 .accueil h1 { font-size: 44px; margin-top: 8px; }
 .liens { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 24px 0; }
 .liens a {
